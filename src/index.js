@@ -12,11 +12,11 @@ app.use(express.json())
 let db
 
 // Use process.env to access variables from .env
-const PORT = process.env.PORT || 3000
+const port = process.env.PORT || 3000
 
 connectToDb((err) => {
     if (!err) {
-        app.listen(PORT, () => {
+        app.listen(port, () => {
             console.log('APP LISTENING ON PORT 3000')
         })
         db = getDb()
